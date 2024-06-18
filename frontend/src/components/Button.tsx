@@ -2,9 +2,11 @@
 
 export const Button = ({onClick, children} : {onClick: ()=> void, children: React.ReactNode}) => {
     // const navigate = useNavigate();
-    return <button
+    return <div className="flex items-center">
+        <button
     onClick={onClick}
-    className=" text-2xl rounded bg-blue-500 hover:bg-blue-700 text-white font-bold">
+    className=" text-2xl rounded-md bg-blue-500 p-4 border hover:bg-blue-700 text-white font-bold">
        {children}
     </button>
+    </div>
 }
