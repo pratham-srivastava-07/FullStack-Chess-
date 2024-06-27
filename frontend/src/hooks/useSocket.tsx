@@ -18,9 +18,9 @@ export const useSocket = () => {
             
         }
 
-        return  () => {
-            ws.close();
-        }
+        // return  () => {
+        //     ws.close();
+        // }
     }, [])
 
 

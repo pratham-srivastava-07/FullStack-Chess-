@@ -30,7 +30,6 @@ socket: WebSocket;
                     setFrom(squareRepresentation)
                   }
                   else {
-                    setTo(square?.square ?? null)
                     socket.send(JSON.stringify({
                       type: MOVE,
                       payload: {
@@ -38,6 +37,7 @@ socket: WebSocket;
                         to: squareRepresentation
                       }
                     }))
+                    setFrom(null)
                     console.log({from, to})
                   }
                  }}

@@ -10,6 +10,6 @@ wss.on("connection", function connection(ws){
     
     gameManager.addPlayer(ws);
     ws.on("disconnect", ()=> gameManager.removePlayer(ws));
-    ws.send("something")
+    // ws.send("something")
 })
 
