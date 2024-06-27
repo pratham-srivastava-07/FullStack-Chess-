@@ -28,7 +28,7 @@ class GameManager {
         }
     }
     handleMessage(socket) {
-        console.log("message mila");
+        // console.log("message mila");
         socket.on("message", (data) => {
             const msg = JSON.parse(data.toString());
             if (msg.type === "create") {
@@ -39,7 +39,7 @@ class GameManager {
                 this.startGame(socket);
             }
             if (msg.type === messages_1.MOVE) {
-                console.log("first move");
+                // console.log("first move");
                 const game = this.games.find(game => game.player1 === socket || game.player2 === socket);
                 if (game) {
                     game.makeMove(socket, msg.move);

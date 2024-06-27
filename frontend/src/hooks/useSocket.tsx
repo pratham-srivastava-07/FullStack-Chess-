@@ -11,11 +11,6 @@ export const useSocket = () => {
             console.log("Connected");
             setSocket(ws)
         }
-        ws.onerror = () => {
-            console.error("Error");
-            
-        }
-
         ws.onclose = () => {
             console.log(
                 "Disconnected"

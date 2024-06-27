@@ -38,7 +38,7 @@ export class GameManager {
            }
     }
     private handleMessage(socket: WebSocket) {
-        console.log("message mila");
+        // console.log("message mila");
         
         socket.on("message", (data)=> {
             const msg = JSON.parse(data.toString());
@@ -51,7 +51,7 @@ export class GameManager {
             }
 
             if(msg.type === MOVE) {
-                console.log("first move");
+                // console.log("first move");
                 
                 const game = this.games.find(game=> game.player1 === socket || game.player2 === socket)
                 if(game) {
